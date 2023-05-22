@@ -6,7 +6,6 @@
 //well that was the first idear.... second idear was to create a on drag scroll effect to make it look smoother..
 //_______________________________________________________________________________________________________________________________
 
-
 //cursor from https://www.cssscript.com/interacitve-cursor-dot/#google_vignette because i don't want to do this myself
 
 
@@ -14,6 +13,8 @@
 const cursor = window.curDot({
 
 })
+
+
 //constants
 const drag_tick = 10 // how long we need to drag
 let current_Page = 0 //dont change
@@ -21,7 +22,7 @@ const scroll_speed = 1000
 //define all sections into a 2d array with their index and Element. (i don't know if the index is really needed, but I would like to have it if there are any later issues
 function scrollToSection(section) { //this function is just scrolling to the object
     const topOffset = section[0].offsetTop;
-    add_animation_class()
+    add_animation_class(section[0].id)
     window.scrollTo({
         top: topOffset,
         behavior: 'smooth'
@@ -29,8 +30,16 @@ function scrollToSection(section) { //this function is just scrolling to the obj
     current_Page += 1
 }
 
-function add_animation_class(){
+function add_animation_class(idfromsection){
+    //its very weird. maybe look html to understand it better, It is simple taking alle elements from class wich has the id of the
+    // section and adds the itemid +"_animation" to, so i can add a slide in animation for every obejct
+    const items_for_animation = document.getElementsByClassName(idfromsection)
+    Array.from(items_for_animation).forEach((item) => {
+        console.log("item:", item);
+        item.classList.remove(item.id + "_animation")
 
+        item.classList.add(item.id + "_animation")
+    })
 }
 
 //preventing default scroll because its just cooler yk
@@ -115,7 +124,8 @@ function handleScrollDirection() {
 
 
 
-
+var image = document.getElementsByClassName('full-screen-div');
+new simpleParallax(image);
 
 //cursor
 

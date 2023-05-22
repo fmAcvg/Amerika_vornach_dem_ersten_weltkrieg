@@ -47,3 +47,9 @@
     margin: 0;
     color: #FFFFFF;
 }
+
+.underscore_sec_1_animation{
+    animation: ease-in;
+    animation: widht-animation 2s;
+}
+

@@ -35,8 +35,6 @@ section:nth-of-type(3) {
     width: 386px;
     height: 5px;
     margin-top: 2%;
-    animation: ease-in;
-    animation: widht-animation 2s;
 
     background: #FFFFFF;
 }
