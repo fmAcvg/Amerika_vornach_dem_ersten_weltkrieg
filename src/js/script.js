@@ -7,42 +7,53 @@
 //_______________________________________________________________________________________________________________________________
 
 //cursor from https://www.cssscript.com/interacitve-cursor-dot/#google_vignette because i don't want to do this myself
-
-
+window.scrollTo(0, 0);
+const $ = s => document.querySelector(s); //someone said i should do that. I dont really use it
 
 const cursor = window.curDot({
+    easing: 10
 
 })
 
+const cursor2 = window.curDot({
+    easing: 2,
+    diameter:20,
+    borderColor:"transparent",
+    background:"lightgrey"
+})
+
+
+
+cursor.over($(".hover1"), {
+    background: "#fff",
+    scale:1.5
+});
+cursor2.over($(".hover1"), {
+    background: "rgba(255,255,255,0)",
+
+});
+
+
+
 
 //constants
-const drag_tick = 10 // how long we need to drag
+const drag_tick = 40// how long we need to drag
 let current_Page = 0 //dont change
 const scroll_speed = 1000
-//define all sections into a 2d array with their index and Element. (i don't know if the index is really needed, but I would like to have it if there are any later issues
+
 function scrollToSection(section) { //this function is just scrolling to the object
+    console.log("current Page: "+ current_Page)
     const topOffset = section[0].offsetTop;
-    add_animation_class(section[0].id)
     window.scrollTo({
         top: topOffset,
         behavior: 'smooth'
     });
-    current_Page += 1
+    insert_sidebar()//update the sidebar
+
+
 }
 
-function add_animation_class(idfromsection){
-    //its very weird. maybe look html to understand it better, It is simple taking alle elements from class wich has the id of the
-    // section and adds the itemid +"_animation" to, so i can add a slide in animation for every obejct
-    const items_for_animation = document.getElementsByClassName(idfromsection)
-    Array.from(items_for_animation).forEach((item) => {
-        console.log("item:", item);
-        item.classList.remove(item.id + "_animation")
-
-        item.classList.add(item.id + "_animation")
-    })
-}
-
-//preventing default scroll because its just cooler yk
+//define all sections into a 2d array with their index and Element. (i don't know if the index is really needed, but I would like to have it if there are any later issues
 function define_all_sections() {
     const returningArray = []
     const all_sections = document.querySelectorAll(".sec");
@@ -55,16 +66,34 @@ function define_all_sections() {
 }
 
 sections = define_all_sections();
+function insert_sidebar() {
+    const sidebar_element = document.getElementsByClassName("container-sidebar");
+    sidebar_element[0].innerHTML = "";
 
-let scroll_counter = 0;
-
-function next_section(){
-    scroll_counter +=1
-    scrollToSection(sections[scroll_counter])
+    for (let i = 0; i < sections.length; i++) {
+        if (i === current_Page) {
+            sidebar_element[0].innerHTML += `<div class="box active"><div class="boxtransparent" id=${i}></div></div>`;
+        } else {
+            sidebar_element[0].innerHTML += `<div class="box"><div onclick="current_Page = ${i}; scrollToSection(sections[${i}]); ;" class="boxtransparent" id=${i}></div></div>`;
+        }
+    }
 }
-function last_section(){
-    scroll_counter -=1
-    scrollToSection(sections[scroll_counter])
+insert_sidebar()
+
+function next_section() {
+    const nextPage = current_Page + 1;
+    if (nextPage < sections.length) {
+        current_Page = nextPage;
+        scrollToSection(sections[current_Page]);
+    }
+}
+
+function last_section() {
+    const prevPage = current_Page - 1;
+    if (prevPage >= 0) {
+        current_Page = prevPage;
+        scrollToSection(sections[current_Page]);
+    }
 }
 
 //test
@@ -81,35 +110,45 @@ document.addEventListener('keydown', (event) => {
 }, false);
 
 
+let isDragging = false;
 let startY;
 let dist = 0;
 
 window.addEventListener('touchstart', function(e) {
+    isDragging = true;
     startY = e.touches[0].clientY;
 });
 
 window.addEventListener('touchmove', function(e) {
+    if (!isDragging) return;
     const currentY = e.touches[0].clientY;
     dist = startY - currentY;
-    sections[scroll_counter][0].style.marginTop += dist
 });
 
 window.addEventListener('touchend', function() {
-    handleScrollDirection();
+    if (isDragging) {
+        handleScrollDirection();
+        isDragging = false;
+    }
 });
 
 window.addEventListener('mousedown', function(e) {
+    isDragging = true;
     startY = e.clientY;
-
 });
 
 window.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
     const currentY = e.clientY;
     dist = startY - currentY;
+    window.scrollBy(0, dist/30); //creates a smooth scroll effect.
 });
 
 window.addEventListener('mouseup', function() {
-    handleScrollDirection();
+    if (isDragging) {
+        handleScrollDirection();
+        isDragging = false;
+    }
 });
 
 function handleScrollDirection() {
@@ -125,7 +164,5 @@ function handleScrollDirection() {
 
 
 var image = document.getElementsByClassName('full-screen-div');
-new simpleParallax(image);
 
-//cursor
 

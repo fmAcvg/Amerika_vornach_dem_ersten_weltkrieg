@@ -48,8 +48,57 @@
     color: #FFFFFF;
 }
 
-.underscore_sec_1_animation{
-    animation: ease-in;
-    animation: widht-animation 2s;
+.underscore.trig{
+    animation: widht-animation 1.2s forwards ease-in;
 }
 
+
+
+.fadeInUp{
+    opacity:0;
+}
+.fadeInUp.trig{
+    animation: fadeInUp 1.2s normal forwards ease-in-out;
+}
+
+.container-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 90vh;
+    margin: 5vh;
+    padding: 30px;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 10000000000;
+}
+
+.box {
+    width: 5px;
+    height: calc((100vh - 60px) / 4); /* adjusted to the number of slides in the nav. Currently 4
+    User
+create me a vertical alignment of wihte divs widht a widht of 5pc and height so the amount of divs fits into the screen with 20px margin at the top and bottom center them at the left side
+
+prompt used to create the sidebar (just the css)
+
+
+    */
+    background-color: rgba(255, 255, 255, 0.19);
+    margin: 10px 0px;
+    transition-duration: 0.5s;
+}
+
+.boxtransparent{
+    width: 20px;
+    height: calc((90vh - 90px) / 4);
+}
+
+.box.active{
+    background-color: rgb(255, 255, 255);
+}
+
+
+.box:hover{
+    background-color: rgb(255, 255, 255);
+}
