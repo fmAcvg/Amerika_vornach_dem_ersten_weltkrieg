@@ -102,3 +102,10 @@ prompt used to create the sidebar (just the css)
 .box:hover{
     background-color: rgb(255, 255, 255);
 }
+
+.backgroundimage{
+    background: url("46239601_401.jpg"), #000000;
+    filter: blur(3px) contrast(120%) brightness(80%);
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="88b372d5-e650-4038-a905-7f16da97c564" name="Changes" comment="Alles fertig bis auf die infos undso :=) kein js mehr">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/46239601_401.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/section1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/section1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/cursor/cursor-dot/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/cursor/cursor-dot/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectId" id="2Q9W273G16cVTyaNT2vOs2uzGli" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fly21\WebstormProjects\Amerika_vornach_dem_ersten_weltkrieg\src\css" />
+      <recent name="C:\Users\fly21\WebstormProjects\Amerika_vornach_dem_ersten_weltkrieg\src\js" />
+      <recent name="C:\Users\fly21\WebstormProjects\Amerika_vornach_dem_ersten_weltkrieg\src\assets" />
+      <recent name="C:\Users\fly21\WebstormProjects\Amerika_vornach_dem_ersten_weltkrieg\src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88b372d5-e650-4038-a905-7f16da97c564" name="Changes" comment="" />
+      <created>1684766068027</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684766068027</updated>
+      <workItem from="1684766069248" duration="601000" />
+      <workItem from="1684766692850" duration="198000" />
+      <workItem from="1684766910133" duration="967000" />
+      <workItem from="1684767906030" duration="17934000" />
+      <workItem from="1684870155491" duration="624000" />
+      <workItem from="1685038375252" duration="10492000" />
+      <workItem from="1685105737871" duration="1671000" />
+    </task>
+    <task id="LOCAL-00001" summary="Erste Anfänge. Hab jetzt viele anläufe genommen und denke mal ne halbwegs gute lösung gefunden ;).">
+      <created>1684782280055</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684782280055</updated>
+    </task>
+    <task id="LOCAL-00002" summary="nicht mehr viel geschafft, aber nen paar bugfixes :)">
+      <created>1684787025998</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684787025998</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Alles fertig bis auf die infos undso :=) kein js mehr">
+      <created>1685047151286</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685047151286</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Erste Anfänge. Hab jetzt viele anläufe genommen und denke mal ne halbwegs gute lösung gefunden ;)." />
+    <MESSAGE value="nicht mehr viel geschafft, aber nen paar bugfixes :)" />
+    <MESSAGE value="Alles fertig bis auf die infos undso :=) kein js mehr" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alles fertig bis auf die infos undso :=) kein js mehr" />
+  </component>
+  <component name="com.github.evgenys91.machinet.common.dslhistory.DslHistoryState">
+    <option name="historyDtoById">
+      <map>
+        <entry key="23563f">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="23563f" />
+              <option name="initiateTms" value="1684767168799" />
+              <option name="request" value="hi" />
+              <option name="response" value="" />
+            </ChatHistoryModel>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
